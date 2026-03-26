@@ -117,3 +117,29 @@ ul li a:hover::after{
     background-color: var(--voilet-fonce);
     transform: translateY(-3PX);
 } 
+.apropos{
+    width: 800px;
+    margin: 6rem auto;
+    text-align: center;
+}
+section h2{
+    color: var(--voilet-doux);
+    font-size: 2.6rem;
+    font-weight: 700;
+    position: relative;
+    text-align: center;
+}
+section h2::after{
+    content:'';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--voilet-doux);
+    margin: 1.3rem auto;
+    border: radius 2px; 
+}
+.apropos{
+    margin-bottom: 2rem;
+    color: var(--gris-fonce);
+    font-size: 1.1rem;
+}
