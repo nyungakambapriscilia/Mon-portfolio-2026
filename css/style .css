@@ -191,7 +191,7 @@ footer a {
     margin: 0 10px;
     transition: color 0.3s ease, transform 0.2s ease;
 }
-footer a {
+footer a:hover {
     color: var(--orange-vif);
     transform: translateY(-3px);
 }
