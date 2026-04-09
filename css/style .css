@@ -195,3 +195,145 @@ footer a:hover {
     color: var(--orange-vif);
     transform: translateY(-3px);
 }
+
+
+
+body{
+    font-family: 'poppins',sans-serif;
+    background-color: #fcfdfe;
+    color: #444;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Styles Page Contact --- */
+
+.contact-container {
+    max-width: 900px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+    margin-top: 3rem;
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.contact-info {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-info h3 {
+    color: var(--voilet-fonce);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.contact-item {
+    margin: 1.5rem 0;
+    font-size: 1.2rem;
+    color: var(--gris-tres-fonce);
+}
+
+.contact-item i {
+    color: var(--voilet-doux);
+    margin-right: 10px;
+}
+
+.social-direct {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-direct a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: opacity 0.3s;
+}
+
+.whatsapp { background-color: #25D366; }
+.telegram { background-color: #0088cc; }
+
+.social-direct a:hover { opacity: 0.8; }
+
+/* Formulaire */
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--gris-tres-fonce);
+}
+
+.form-group input {
+    padding: 12px;
+    border: 1px solid var(--gris-clair);
+    border-radius: 8px;
+    font-family: inherit;
+    background-color: var(--gris-tres-clair);
+}
+
+.btn-submit {
+    background-color: var(--voilet-doux);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: var(--voilet-fonce);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        padding: 2rem;
+    }
+}
