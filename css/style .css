@@ -197,27 +197,110 @@ footer a:hover {
 }
 
 
+/* --- STYLISATION DE LA PAGE PROJETS --- */
 
-body{
-    font-family: 'poppins',sans-serif;
-    background-color: #fcfdfe;
-    color: #444;
+.realisations {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+/* Grille des projets */
+.projets-gird {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    padding-top: 2rem;
+}
 
+/* Style de chaque carte Projet */
+.Projet, .Projets, .projets {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
 
+.Projet:hover, .Projets:hover, .projets:hover {
+    transform: translateY(-10px);
+}
 
+/* Image du projet */
+.Projet img, .Projets img, .projets img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid var(--voilet-doux);
+}
 
+/* Contenu textuel de la carte */
+.Projet h3, .Projets h4, .projets h4 {
+    padding: 1.5rem 1.5rem 0.5rem;
+    color: var(--voilet-doux);
+    font-size: 1.4rem;
+}
 
+.Projet p, .Projets p, .projets p {
+    padding: 0 1.5rem;
+    color: var(--gris-fonce);
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
 
+/* Style des Tags (Langages) */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 1rem 1.5rem;
+    list-style: none;
+}
 
+.tags li {
+    background-color: #F0EFFF; /* Violet très clair */
+    color: var(--voilet-doux);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-left: 0; /* Override du style général des li */
+}
 
+/* Liens en bas de carte (Code / Démo) */
+.links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 1.5rem;
+    border-top: 1px solid var(--gris-clair);
+}
 
+.links a {
+    text-decoration: none;
+    color: var(--gris-tres-fonce);
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+}
 
+.links a i {
+    font-size: 1.1rem;
+}
 
+.links a:hover {
+    color: var(--voilet-doux);
+}
 
-
-
+/* Masquer le h1 principal si vous voulez garder uniquement le h2 "Mes Réalisations" comme sur la maquette */
+main > h1 {
+    display: none;
+}
 
 
 
@@ -335,5 +418,160 @@ body{
     .contact-content {
         flex-direction: column;
         padding: 2rem;
+    }
+}
+
+/* Styles pour la page Divertissement */
+
+.divertissement-hero {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.container-divertissement {
+    max-width: 1000px;
+    margin: 0 auto 6rem auto;
+    padding: 0 2rem;
+}
+
+.media-section {
+    margin-top: 4rem;
+}
+
+.media-section h3 {
+    color: var(--voilet-fonce);
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.webtoon-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.grid-media {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+/* Pour centrer l'image unique du jeu vidéo */
+.grid-media.single-item {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.grid-media figure {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.grid-media figure:hover {
+    transform: scale(1.03);
+}
+
+.grid-media img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.grid-media figcaption {
+    margin-top: 1rem;
+    font-weight: 600;
+    color: var(--gris-tres-fonce);
+    text-align: center;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+    .grid-media {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* --- Styles pour la page Passions --- */
+
+.passions-container {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.passion-item {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 6rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Alterne l'ordre de l'image et du texte pour les sections "reverse" */
+.passion-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.passion-img {
+    flex: 1;
+}
+
+.passion-img img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.passion-text {
+    flex: 1;
+    text-align: center;
+}
+
+.passion-text p {
+    font-size: 1.4rem;
+    color: var(--gris-tres-fonce);
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+}
+
+/* Bouton spécifique pour le lien vers la plateforme de livres */
+.btn-passion {
+    text-decoration: none;
+    background-color: var(--orange-vif);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+.btn-passion:hover {
+    opacity: 0.9;
+}
+
+/* Responsive pour mobiles */
+@media (max-width: 768px) {
+    .passion-item, .passion-item.reverse {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .passion-img img {
+        height: 200px;
     }
 }
